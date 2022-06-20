@@ -18,4 +18,12 @@ namespace ConsoleMon
             target.TakeDmg(damage);
         }
     }
+    internal enum Elements
+    {
+        Water,
+        Fire,
+        Earth,
+        Air,
+        Gay
+    }
 }

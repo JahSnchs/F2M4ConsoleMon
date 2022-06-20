@@ -11,6 +11,7 @@ namespace ConsoleMon
         private int health;
         private int energy;
         private string name;
+        private Elements weakness;
 
         List<Skill> Skills = new List<Skill>();
 
