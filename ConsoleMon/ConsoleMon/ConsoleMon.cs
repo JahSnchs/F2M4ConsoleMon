@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleMon
+namespace ConsoleMonsters
 {
     internal class ConsoleMon
     {
-        private int health;
-        private int energy;
-        private string name;
-        private Elements weakness;
+        internal int health;
+        internal int energy;
+        internal string name;
+        internal Elements weakness;
 
-        List<Skill> Skills = new List<Skill>();
+        internal List<Skill> Skills = new List<Skill>();
 
         internal void TakeDmg(int damage)
         {
@@ -25,6 +25,23 @@ namespace ConsoleMon
             energy -= energyCost;
         }
 
+        internal ConsoleMon()
+        {
 
+        }
+
+        internal ConsoleMon(ConsoleMon copyFrom)
+        {
+            this.health = copyFrom.health;
+            this.energy = copyFrom.energy;
+            this.name = copyFrom.name;
+            this.weakness = copyFrom.weakness;
+
+            foreach (Skill skill in copyFrom.Skills)
+            {
+                Skill pewpewCopy = new Skill(skill);
+                Skills.Add(pewpewCopy);
+            }
+        }
     }
 }
